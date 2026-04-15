@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700;800;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#2f3132",
+                    "secondary-fixed": "#ffdf92",
+                    "secondary-container": "#fecb32",
+                    "primary-container": "#811026",
+                    "surface-variant": "#e3e2e3",
+                    "outline-variant": "#debfbf",
+                    "surface-dim": "#dadadb",
+                    "surface": "#faf9fa",
+                    "surface-container-low": "#f4f3f4",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#ff8a91",
+                    "on-secondary-fixed-variant": "#594400",
+                    "surface-tint": "#ab3241",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#eeeeee",
+                    "primary-fixed-dim": "#ffb3b5",
+                    "on-primary-fixed-variant": "#8a182c",
+                    "tertiary-fixed": "#e4e2e1",
+                    "on-surface-variant": "#574142",
+                    "on-background": "#1a1c1d",
+                    "secondary": "#755b00",
+                    "inverse-on-surface": "#f1f0f1",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#ffb3b5",
+                    "on-surface": "#1a1c1d",
+                    "surface-bright": "#faf9fa",
+                    "surface-container-high": "#e8e8e9",
+                    "tertiary": "#2a2a2a",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-container": "#adabab",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "background": "#faf9fa",
+                    "outline": "#8b7171",
+                    "error-container": "#ffdad6",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed": "#ffdada",
+                    "on-secondary-container": "#705600",
+                    "on-primary-fixed": "#40000c",
+                    "secondary-fixed-dim": "#f2c025",
+                    "tertiary-container": "#404040",
+                    "surface-container-highest": "#e3e2e3",
+                    "tertiary-fixed-dim": "#c8c6c6",
+                    "primary": "#5c0015",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#241a00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Work Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-header {
+            background: rgba(250, 249, 250, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-[#1a1c1d]/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex items-center justify-between px-8 py-4 max-w-screen-2xl mx-auto">
+<a class="font-['Work_Sans'] font-black text-xl tracking-tighter text-[#811026] dark:text-[#ffb4ab]" href="index.html">UMD Consumer Insight &amp; Analytics</a>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="font-['Work_Sans'] font-medium text-sm tracking-tight text-[#2a2a2a] dark:text-[#e3e2e3] hover:text-[#811026] transition-all duration-300" href="about.html">About</a>
+<a class="font-['Work_Sans'] font-medium text-sm tracking-tight text-[#2a2a2a] dark:text-[#e3e2e3] hover:text-[#811026] transition-all duration-300" href="academics.html">Academics</a>
+<a class="font-['Work_Sans'] font-medium text-sm tracking-tight text-[#2a2a2a] dark:text-[#e3e2e3] hover:text-[#811026] transition-all duration-300" href="faculty.html">Faculty</a>
+<a class="font-['Work_Sans'] font-medium text-sm tracking-tight text-[#2a2a2a] dark:text-[#e3e2e3] hover:text-[#811026] transition-all duration-300" href="centers.html">Community</a>
+<a class="font-['Work_Sans'] font-medium text-sm tracking-tight text-[#811026] dark:text-[#fecb32] border-b-2 border-[#811026] dark:border-[#fecb32] pb-1" href="news.html">News</a>
+<a class="font-['Work_Sans'] font-medium text-sm tracking-tight text-[#2a2a2a] dark:text-[#e3e2e3] hover:text-[#811026] transition-all duration-300" href="info.html">Info For</a>
+</nav>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-surface-container rounded-full px-4 py-1.5 border-none">
+<span class="material-symbols-outlined text-on-surface-variant text-sm mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-40" placeholder="Search insights..." type="text"/>
+</div>
+<a class="inline-flex bg-[#fecb32] text-on-secondary-container px-6 py-2 rounded-xl font-['Work_Sans'] font-bold text-sm transition-transform active:scale-95" href="contact.html">Apply Now</a>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-20 max-w-screen-2xl mx-auto px-8">
+<!-- Hero Section: Editorial Style -->
+<section class="mb-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+<div class="lg:col-span-8">
+<span class="text-primary font-bold tracking-widest text-xs uppercase mb-4 block">The Pulse of Analytics</span>
+<h1 class="font-headline text-6xl md:text-8xl font-black tracking-tighter text-on-background leading-none">
+                        Latest News <br/> &amp; Events.
+                    </h1>
+</div>
+<div class="lg:col-span-4 pb-4">
+<p class="text-on-surface-variant text-lg leading-relaxed font-body">
+                        Exploring the frontier of consumer behavior through academic rigor and industry-leading research at the University of Minnesota Duluth.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Featured News: Bento Grid Layout -->
+<section class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 mb-32">
+<!-- Main Featured Card -->
+<div class="md:col-span-2 md:row-span-2 group relative overflow-hidden rounded-xl bg-surface-container-highest min-h-[500px] flex flex-col justify-end p-8">
+<div class="absolute inset-0 z-0">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="high-tech analytics lab with students analyzing complex data visualizations on large glass screens in a modern Duluth campus building" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvMLvbAkYENJzYNna2TnyXyZ_x8R5opMzezJvfYETupkKdFVfCNvL3Q7YwBHoXNcLqh3IYFU1e_ePmsVXPUAqOkhuLm1U3faUqEsjKHzh4PwaEu4hB78Dakc4IjgVEIcZl27MS8S4KA7x_pidXzB6I3vVPfIBY3CXulMNwuqDD_EK55ZkV_dyhzOQWrJCB-VgEuKq1PxrZYKf4iggBUIBgFTJtC63Id2fLTi-OxQeHuJX5JAwnGm9KymeMNLmJwSTF3WwVYaHrNHgi"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+</div>
+<div class="relative z-10">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded text-xs font-bold mb-4 inline-block">Breaking Insight</span>
+<h2 class="text-white font-headline text-3xl font-bold mb-4 leading-tight">Predictive Modeling Wins National Research Award at Annual Symposium</h2>
+<p class="text-gray-300 text-sm mb-6">Student researchers lead the way in quantifying emotional resonance in retail environments.</p>
+<a class="text-white flex items-center font-bold text-sm group-hover:gap-2 transition-all" href="news.html">
+                        Read Story <span class="material-symbols-outlined ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Achievement Card -->
+<div class="md:col-span-2 bg-primary-container text-on-primary rounded-xl p-8 flex flex-col justify-between">
+<div>
+<span class="text-on-primary-container font-bold text-xs tracking-widest uppercase mb-4 block">Student Spotlight</span>
+<h3 class="font-headline text-2xl font-bold leading-snug">Maria Chen Named 'Emerging Analyst' by Midwest Marketing Association</h3>
+</div>
+<div class="flex items-center gap-4 mt-8">
+<img alt="" class="w-12 h-12 rounded-full object-cover border-2 border-on-primary-container" data-alt="professional headshot of a smiling young woman in a business suit against a soft focus university architecture background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJQ2EeT4f-vUhKmShTwb1fZWEVMESCSwBp24w-wYpr1w60qS7-Rft6lo9hxlu-4Ll3Qu5jdw8qyEmQ2ozFqowbtff3WufHzP_KfrnLU9rvhxDo9Ejuv-jrYVI0dgoGxc9TyovOzugm6T9j6g5pljAQM0yE6AvM7pWTwIz75C8OWvuoHnGiFIl688QORywovQ-Kd1lf1egFELT4eFztw8RlaBx8C7TrQnB0MSHSkSMNvWKIVSTHcTXoAptgUlgdKwIVziTibIng9tUi"/>
+<div>
+<p class="text-sm font-bold">Maria Chen, '25</p>
+<p class="text-xs text-on-primary-container">Senior Research Assistant</p>
+</div>
+</div>
+</div>
+<!-- Secondary News Card 1 -->
+<div class="md:col-span-1 bg-surface-container-low rounded-xl p-6 group">
+<span class="text-primary font-bold text-[10px] tracking-widest uppercase mb-2 block">Industry Partnership</span>
+<h4 class="font-headline text-lg font-bold mb-4 group-hover:text-primary transition-colors">Duluth Data Hub Partnership Expanded for Summer Internships</h4>
+<p class="text-on-surface-variant text-sm">New opportunities for students to engage with regional market leaders.</p>
+</div>
+<!-- Secondary News Card 2 -->
+<div class="md:col-span-1 bg-surface-container-low rounded-xl p-6 group">
+<span class="text-primary font-bold text-[10px] tracking-widest uppercase mb-2 block">Faculty Research</span>
+<h4 class="font-headline text-lg font-bold mb-4 group-hover:text-primary transition-colors">Dr. Aris Publishes Meta-Study on Gen Alpha Consumption</h4>
+<p class="text-on-surface-variant text-sm">Deep dive into the emerging digital-native consumer landscape.</p>
+</div>
+</section>
+<!-- Events Calendar: Asymmetric Layout -->
+<section class="mb-32">
+<div class="flex items-baseline justify-between mb-16 border-b border-outline-variant pb-6">
+<h2 class="font-headline text-4xl font-black tracking-tighter">Upcoming Events.</h2>
+<a class="text-primary font-bold text-sm hover:underline underline-offset-8" href="news.html">View Full Calendar</a>
+</div>
+<div class="space-y-0">
+<!-- Event Row 1 -->
+<div class="group py-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center border-b border-outline-variant/30 hover:bg-surface-container-low transition-colors px-4 -mx-4 rounded-xl">
+<div class="md:col-span-2">
+<div class="flex flex-col">
+<span class="font-headline text-4xl font-black text-primary">MAR 24</span>
+<span class="text-on-surface-variant font-bold text-xs uppercase tracking-tighter">Workshop</span>
+</div>
+</div>
+<div class="md:col-span-7">
+<h3 class="font-headline text-2xl font-bold mb-2">Visualizing Complexity: Tableau Masterclass</h3>
+<p class="text-on-surface-variant">Led by industry experts from Target HQ, this hands-on seminar covers advanced dashboard design for consumer metrics.</p>
+</div>
+<div class="md:col-span-3 text-right">
+<button class="bg-tertiary text-white px-6 py-3 rounded-xl text-sm font-bold group-hover:bg-primary transition-colors">Register for Event</button>
+</div>
+</div>
+<!-- Event Row 2 -->
+<div class="group py-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center border-b border-outline-variant/30 hover:bg-surface-container-low transition-colors px-4 -mx-4 rounded-xl">
+<div class="md:col-span-2">
+<div class="flex flex-col">
+<span class="font-headline text-4xl font-black text-primary">APR 02</span>
+<span class="text-on-surface-variant font-bold text-xs uppercase tracking-tighter">Guest Speaker</span>
+</div>
+</div>
+<div class="md:col-span-7">
+<h3 class="font-headline text-2xl font-bold mb-2">Ethics in AI-Driven Market Analysis</h3>
+<p class="text-on-surface-variant">Keynote by Sarah Jenkins, Chief Data Ethics Officer at Vanguard. Exploring the moral horizon of predictive consumerism.</p>
+</div>
+<div class="md:col-span-3 text-right">
+<button class="bg-tertiary text-white px-6 py-3 rounded-xl text-sm font-bold group-hover:bg-primary transition-colors">Register for Event</button>
+</div>
+</div>
+<!-- Event Row 3 -->
+<div class="group py-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center border-b border-outline-variant/30 hover:bg-surface-container-low transition-colors px-4 -mx-4 rounded-xl">
+<div class="md:col-span-2">
+<div class="flex flex-col">
+<span class="font-headline text-4xl font-black text-primary">APR 15</span>
+<span class="text-on-surface-variant font-bold text-xs uppercase tracking-tighter">Symposium</span>
+</div>
+</div>
+<div class="md:col-span-7">
+<h3 class="font-headline text-2xl font-bold mb-2">Annual Consumer Insight Exhibition</h3>
+<p class="text-on-surface-variant">Graduate and undergraduate students present their year-end capstone projects to regional business leaders and recruiters.</p>
+</div>
+<div class="md:col-span-3 text-right">
+<button class="bg-tertiary text-white px-6 py-3 rounded-xl text-sm font-bold group-hover:bg-primary transition-colors">Register for Event</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Media Inquiries: High Contrast Section -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden rounded-[2rem] bg-tertiary text-white shadow-2xl">
+<div class="p-12 md:p-20 flex flex-col justify-center">
+<span class="text-secondary-container font-bold tracking-widest text-xs uppercase mb-6 block">Media Relations</span>
+<h2 class="font-headline text-4xl md:text-5xl font-black mb-8 leading-tight">Looking for an expert opinion?</h2>
+<p class="text-tertiary-fixed-dim text-lg mb-10 leading-relaxed max-w-md">
+                    Our faculty and researchers are available for commentary on market trends, consumer psychology, and data ethics in national and regional media.
+                </p>
+<div class="space-y-4">
+<a class="flex items-center gap-4 group" href="mailto:media@umd.edu">
+<span class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center group-hover:bg-secondary-container group-hover:text-tertiary transition-colors">
+<span class="material-symbols-outlined">mail</span>
+</span>
+<div>
+<p class="text-xs uppercase font-bold text-tertiary-fixed-dim">Email Inquiries</p>
+<p class="font-bold text-lg">press.cia@d.umn.edu</p>
+</div>
+</a>
+</div>
+</div>
+<div class="relative min-h-[400px]">
+<img alt="" class="absolute inset-0 w-full h-full object-cover grayscale opacity-60" data-alt="professional broadcast television studio setup with cameras, lights, and a desk for interviews, glowing with ambient blue and warm lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQOyZ8dthVJX1A1xTXlWoDXUagCaeap6sCVG0l4qcNCfPyzKgxrc_0rS40BoV7ZbyVfAa1vJqZfmjihHDiouQZVzKfas3XkadsGWqCYPYhPEZeXoA0z0YctaGP5EXcCk9BA0Pk4fE0tqtyQfPhyGYQ-c6-jGj1h6_Vyp_hloB3GOpZtfOwd5_jWvLETnmbAKxWM98hedvX8qvwF7MxVeLjriiC409KHmTWeojXRhPhhVOGGISyl6t-KyrqUiflw0RK9hS_vL7TsC4t"/>
+<div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-20 px-8 py-12 bg-[#2a2a2a] dark:bg-[#000000]">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-screen-2xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<h3 class="font-['Work_Sans'] font-bold text-lg text-white mb-6">UMD Consumer Insight</h3>
+<p class="text-gray-400 text-xs leading-relaxed">Labovitz School of Business and Economics<br/>University of Minnesota Duluth<br/>Duluth, MN 55812</p>
+</div>
+<div>
+<h4 class="text-[#fecb32] font-bold text-xs uppercase tracking-widest mb-6">Navigate</h4>
+<ul class="space-y-4">
+<li><a class="font-['Inter'] text-xs text-gray-400 hover:text-white hover:translate-x-1 transition-transform duration-200 block" href="index.html">UMD Home</a></li>
+<li><a class="font-['Inter'] text-xs text-gray-400 hover:text-white hover:translate-x-1 transition-transform duration-200 block" href="#">LSBE School</a></li>
+<li><a class="font-['Inter'] text-xs text-gray-400 hover:text-white hover:translate-x-1 transition-transform duration-200 block" href="#">Employment</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[#fecb32] font-bold text-xs uppercase tracking-widest mb-6">Support</h4>
+<ul class="space-y-4">
+<li><a class="font-['Inter'] text-xs text-gray-400 hover:text-white hover:translate-x-1 transition-transform duration-200 block" href="#">Accessibility</a></li>
+<li><a class="font-['Inter'] text-xs text-gray-400 hover:text-white hover:translate-x-1 transition-transform duration-200 block" href="#">Privacy Policy</a></li>
+<li><a class="font-['Inter'] text-xs text-gray-400 hover:text-white hover:translate-x-1 transition-transform duration-200 block" href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-[#fecb32] font-bold text-xs uppercase tracking-widest mb-6">Stay Connected</h4>
+<div class="flex gap-4 mb-6">
+<a class="text-gray-400 hover:text-[#fecb32]" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-gray-400 hover:text-[#fecb32]" href="#"><span class="material-symbols-outlined">rss_feed</span></a>
+</div>
+<p class="text-gray-400 text-[10px]">© 2024 University of Minnesota Duluth - Consumer Insight &amp; Analytics</p>
+</div>
+</div>
+</footer>
+</body></html>
