@@ -98,29 +98,30 @@
 </div>
 <nav class="flex-grow space-y-1">
 <!-- Active Tab: Dashboard -->
-<a class="flex items-center px-4 py-3 bg-[#811026] text-white rounded-r-full mr-4 font-semibold transition-all duration-200 ease-in-out haptic-feedback-subtle" href="#">
+<a class="flex items-center px-4 py-3 bg-[#811026] text-white rounded-r-full mr-4 font-semibold transition-all duration-200 ease-in-out haptic-feedback-subtle" href="admin.html">
 <span class="material-symbols-outlined mr-3" data-icon="dashboard">dashboard</span>
 <span class="font-['Inter'] text-sm">Dashboard</span>
 </a>
 <!-- Inactive Tabs -->
-<a class="flex items-center px-4 py-3 text-[#2a2a2a] dark:text-[#e3e2e3] hover:bg-[#e3e2e3] dark:hover:bg-[#2a2a2a] rounded-r-full mr-4 transition-all duration-200 ease-in-out" href="#">
+<a class="flex items-center px-4 py-3 text-[#2a2a2a] dark:text-[#e3e2e3] hover:bg-[#e3e2e3] dark:hover:bg-[#2a2a2a] rounded-r-full mr-4 transition-all duration-200 ease-in-out" href="contentnewseditor.html">
 <span class="material-symbols-outlined mr-3" data-icon="edit_note">edit_note</span>
 <span class="font-['Inter'] text-sm">Content Manager</span>
 </a>
-<a class="flex items-center px-4 py-3 text-[#2a2a2a] dark:text-[#e3e2e3] hover:bg-[#e3e2e3] dark:hover:bg-[#2a2a2a] rounded-r-full mr-4 transition-all duration-200 ease-in-out" href="#">
-<span class="material-symbols-outlined mr-3" data-icon="group">group</span>
-<span class="font-['Inter'] text-sm">Student Data</span>
-</a>
-<a class="flex items-center px-4 py-3 text-[#2a2a2a] dark:text-[#e3e2e3] hover:bg-[#e3e2e3] dark:hover:bg-[#2a2a2a] rounded-r-full mr-4 transition-all duration-200 ease-in-out" href="#">
+
+<a class="flex items-center px-4 py-3 text-[#2a2a2a] dark:text-[#e3e2e3] hover:bg-[#e3e2e3] dark:hover:bg-[#2a2a2a] rounded-r-full mr-4 transition-all duration-200 ease-in-out" href="news.html">
 <span class="material-symbols-outlined mr-3" data-icon="query_stats">query_stats</span>
 <span class="font-['Inter'] text-sm">Analytics Reports</span>
 </a>
-<a class="flex items-center px-4 py-3 text-[#2a2a2a] dark:text-[#e3e2e3] hover:bg-[#e3e2e3] dark:hover:bg-[#2a2a2a] rounded-r-full mr-4 transition-all duration-200 ease-in-out" href="#">
+<a class="flex items-center px-4 py-3 text-[#2a2a2a] dark:text-[#e3e2e3] hover:bg-[#e3e2e3] dark:hover:bg-[#2a2a2a] rounded-r-full mr-4 transition-all duration-200 ease-in-out" href="contact.html">
 <span class="material-symbols-outlined mr-3" data-icon="settings">settings</span>
 <span class="font-['Inter'] text-sm">Settings</span>
 </a>
 </nav>
 <div class="mt-auto px-4 pr-8">
+<a href="index.html" class="w-full mb-3 bg-surface-container-highest text-on-surface py-3 px-4 rounded-xl flex items-center justify-center gap-2 hover:bg-surface-variant transition-colors border border-outline-variant">
+<span class="material-symbols-outlined text-sm" data-icon="public">public</span>
+<span class="text-xs font-semibold uppercase tracking-widest">View Main Site</span>
+</a>
 <button class="w-full bg-primary-container text-on-primary py-3 px-4 rounded-xl flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
 <span class="material-symbols-outlined text-sm" data-icon="add">add</span>
 <span class="text-xs font-semibold uppercase tracking-widest">Generate Report</span>
@@ -174,26 +175,26 @@
 <div class="absolute right-0 bottom-0 w-64 h-64 bg-secondary-container opacity-10 rounded-full blur-3xl -mr-20 -mb-20"></div>
 </div>
 <!-- Action Grid -->
-<div class="col-span-12 md:col-span-3 group bg-surface-container-highest p-6 rounded-xl hover:bg-primary-fixed transition-all cursor-pointer">
-<span class="material-symbols-outlined text-3xl mb-4 block" data-icon="edit_square">edit_square</span>
-<h3 class="font-bold text-lg mb-1">Edit Content</h3>
-<p class="text-sm opacity-60">Modify site copy and research highlights.</p>
-</div>
-<div class="col-span-12 md:col-span-3 group bg-surface-container-highest p-6 rounded-xl hover:bg-primary-fixed transition-all cursor-pointer">
-<span class="material-symbols-outlined text-3xl mb-4 block" data-icon="trending_up">trending_up</span>
-<h3 class="font-bold text-lg mb-1">Update Stats</h3>
-<p class="text-sm opacity-60">Refresh placement rates and salary data.</p>
-</div>
-<div class="col-span-12 md:col-span-3 group bg-surface-container-highest p-6 rounded-xl hover:bg-primary-fixed transition-all cursor-pointer">
-<span class="material-symbols-outlined text-3xl mb-4 block" data-icon="image">image</span>
-<h3 class="font-bold text-lg mb-1">Manage Images</h3>
-<p class="text-sm opacity-60">Upload new faculty and event photography.</p>
-</div>
-<div class="col-span-12 md:col-span-3 group bg-[#2a2a2a] text-white p-6 rounded-xl transition-all cursor-pointer">
-<span class="material-symbols-outlined text-3xl text-secondary-container mb-4 block" data-icon="auto_awesome">auto_awesome</span>
-<h3 class="font-bold text-lg mb-1">AI Insights</h3>
-<p class="text-sm opacity-60">Predicted traffic trends for next semester.</p>
-</div>
+<a href="contentnewseditor.html#manage-faculty" class="col-span-12 md:col-span-3 group bg-surface-container-highest p-6 rounded-xl hover:bg-primary-fixed transition-all cursor-pointer block border border-transparent hover:border-primary/20">
+<span class="material-symbols-outlined text-3xl mb-4 block text-primary" data-icon="person_search">person_search</span>
+<h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">Manage Faculty</h3>
+<p class="text-sm opacity-80 text-on-surface-variant">Update professor profiles and bios.</p>
+</a>
+<a href="contentnewseditor.html#manage-events" class="col-span-12 md:col-span-3 group bg-surface-container-highest p-6 rounded-xl hover:bg-primary-fixed transition-all cursor-pointer block border border-transparent hover:border-primary/20">
+<span class="material-symbols-outlined text-3xl mb-4 block text-primary" data-icon="event">event</span>
+<h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">Manage Events</h3>
+<p class="text-sm opacity-80 text-on-surface-variant">Add or edit upcoming calendar events.</p>
+</a>
+<a href="contentnewseditor.html#manage-students" class="col-span-12 md:col-span-3 group bg-surface-container-highest p-6 rounded-xl hover:bg-primary-fixed transition-all cursor-pointer block border border-transparent hover:border-primary/20">
+<span class="material-symbols-outlined text-3xl mb-4 block text-primary" data-icon="groups">groups</span>
+<h3 class="font-bold text-lg mb-1 group-hover:text-primary transition-colors">Manage Students</h3>
+<p class="text-sm opacity-80 text-on-surface-variant">Upload student experience recounts.</p>
+</a>
+<a href="contentnewseditor.html#manage-news" class="col-span-12 md:col-span-3 group bg-[#1a1c1d] dark:bg-primary-container text-white p-6 rounded-xl hover:opacity-90 transition-all cursor-pointer block shadow-lg">
+<span class="material-symbols-outlined text-3xl text-secondary-container mb-4 block" data-icon="newspaper">newspaper</span>
+<h3 class="font-bold text-lg mb-1 text-secondary-container">Manage News</h3>
+<p class="text-sm opacity-80">Publish articles and PR links.</p>
+</a>
 </section>
 <!-- Visualizations -->
 <section class="grid grid-cols-12 gap-12">
@@ -279,13 +280,14 @@
 </div>
 <div class="flex flex-col gap-3">
 <span class="text-white text-xs font-bold uppercase tracking-widest mb-2">Internal Links</span>
-<a class="text-[#e3e2e3]/70 font-['Inter'] text-xs font-light tracking-wide hover:text-white transition-colors" href="#">Privacy Policy</a>
-<a class="text-[#e3e2e3]/70 font-['Inter'] text-xs font-light tracking-wide hover:text-white transition-colors" href="#">Accessibility</a>
+<a class="text-[#e3e2e3]/70 font-['Inter'] text-xs font-light tracking-wide hover:text-white transition-colors" href="info.html">Privacy Policy</a>
+<a class="text-[#e3e2e3]/70 font-['Inter'] text-xs font-light tracking-wide hover:text-white transition-colors" href="info.html">Accessibility</a>
 </div>
 <div class="flex flex-col gap-3">
 <span class="text-white text-xs font-bold uppercase tracking-widest mb-2">Quick Contact</span>
-<a class="text-[#fecb32] font-['Inter'] text-xs font-light tracking-wide hover:text-white transition-colors underline" href="#">Contact IT Support</a>
-<a class="text-[#e3e2e3]/70 font-['Inter'] text-xs font-light tracking-wide hover:text-white transition-colors" href="#">UMD Home</a>
+<a class="text-[#fecb32] font-['Inter'] text-xs font-light tracking-wide hover:text-white transition-colors underline" href="contact.html">Contact IT Support</a>
+<a class="text-[#e3e2e3]/70 font-['Inter'] text-xs font-light tracking-wide hover:text-white transition-colors" href="https://lsbe.d.umn.edu/" target="_blank" rel="noopener noreferrer">LSBE Home</a>
+<a class="text-[#e3e2e3]/70 font-['Inter'] text-xs font-light tracking-wide hover:text-white transition-colors" href="https://d.umn.edu/" target="_blank" rel="noopener noreferrer">UMD Home</a>
 </div>
 </div>
 </footer>

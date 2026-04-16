@@ -90,23 +90,21 @@
 </head>
 <body class="bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-[#1a1c1d]/80 backdrop-blur-md shadow-sm dark:shadow-none">
 <div class="flex items-center justify-between px-8 py-4 max-w-screen-2xl mx-auto">
-<div class="font-headline font-black text-xl tracking-tighter text-primary-container">
-                UMD Consumer Insight &amp; Analytics
-            </div>
-<div class="hidden md:flex items-center space-x-8 font-headline font-medium text-sm tracking-tight">
-<a class="text-on-surface hover:text-primary-container transition-all duration-300" href="about.html">About</a>
-<a class="text-on-surface hover:text-primary-container transition-all duration-300" href="academics.html">Academics</a>
-<a class="text-on-surface hover:text-primary-container transition-all duration-300" href="faculty.html">Faculty</a>
-<a class="text-on-surface hover:text-primary-container transition-all duration-300" href="centers.html">Community</a>
-<a class="text-on-surface hover:text-primary-container transition-all duration-300" href="news.html">News</a>
-<a class="text-on-surface hover:text-primary-container transition-all duration-300" href="info.html">Info For</a>
-<a class="text-primary-container border-b-2 border-primary-container pb-1 transition-all duration-300" href="contact.html">Contact Us</a>
+<a class="font-['Work_Sans'] font-black text-xl tracking-tighter text-[#811026] dark:text-[#ffdadb]" href="index.html">UMD Consumer Insight &amp; Analytics</a>
+<div class="hidden md:flex items-center space-x-8 font-['Work_Sans'] font-medium text-sm tracking-tight">
+<a class="text-[#2a2a2a] dark:text-[#e3e2e3] hover:text-[#811026] dark:hover:text-[#fecb32] transition-all duration-300" href="index.html">Home</a>
+<a class="text-[#2a2a2a] dark:text-[#e3e2e3] hover:text-[#811026] dark:hover:text-[#fecb32] transition-all duration-300" href="about.html">About</a>
+<a class="text-[#2a2a2a] dark:text-[#e3e2e3] hover:text-[#811026] dark:hover:text-[#fecb32] transition-all duration-300" href="academics.html">Academics</a>
+<a class="text-[#2a2a2a] dark:text-[#e3e2e3] hover:text-[#811026] dark:hover:text-[#fecb32] transition-all duration-300" href="faculty.html">Faculty</a>
+<a class="text-[#2a2a2a] dark:text-[#e3e2e3] hover:text-[#811026] dark:hover:text-[#fecb32] transition-all duration-300" href="centers.html">Community</a>
+<a class="text-[#2a2a2a] dark:text-[#e3e2e3] hover:text-[#811026] dark:hover:text-[#fecb32] transition-all duration-300" href="news.html">News</a>
+<a class="text-[#2a2a2a] dark:text-[#e3e2e3] hover:text-[#811026] dark:hover:text-[#fecb32] transition-all duration-300" href="info.html">Info</a>
 </div>
-<a class="inline-flex bg-secondary-container text-on-secondary-container px-6 py-2.5 rounded-xl font-headline font-bold text-sm hover:opacity-80 transition-all active:scale-95" href="info.html">
-                Apply Now
-            </a>
+<div class="flex items-center gap-4">
+<a class="inline-flex px-5 py-2 text-sm font-semibold rounded-xl border-2 border-[#811026] text-[#811026] hover:bg-[#811026] hover:text-white transition-all duration-300" href="adminlogin.html">Staff Login</a>
+</div>
 </div>
 </nav>
 <main class="pt-32 pb-20 px-8 max-w-screen-2xl mx-auto">
@@ -195,13 +193,13 @@
 <div class="mt-12">
 <p class="text-xs font-bold uppercase tracking-widest mb-4 opacity-70">Social Insights</p>
 <div class="flex gap-4">
-<a class="w-10 h-10 rounded-full border border-on-secondary-container/30 flex items-center justify-center hover:bg-on-secondary-container hover:text-secondary-container transition-all" href="#">
+<a class="w-10 h-10 rounded-full border border-on-secondary-container/30 flex items-center justify-center hover:bg-on-secondary-container hover:text-secondary-container transition-all" href="news.html">
 <span class="material-symbols-outlined text-sm">hub</span>
 </a>
-<a class="w-10 h-10 rounded-full border border-on-secondary-container/30 flex items-center justify-center hover:bg-on-secondary-container hover:text-secondary-container transition-all" href="#">
+<a class="w-10 h-10 rounded-full border border-on-secondary-container/30 flex items-center justify-center hover:bg-on-secondary-container hover:text-secondary-container transition-all" href="news.html">
 <span class="material-symbols-outlined text-sm">database</span>
 </a>
-<a class="w-10 h-10 rounded-full border border-on-secondary-container/30 flex items-center justify-center hover:bg-on-secondary-container hover:text-secondary-container transition-all" href="#">
+<a class="w-10 h-10 rounded-full border border-on-secondary-container/30 flex items-center justify-center hover:bg-on-secondary-container hover:text-secondary-container transition-all" href="news.html">
 <span class="material-symbols-outlined text-sm">groups</span>
 </a>
 </div>
@@ -286,17 +284,17 @@
 <div class="col-span-1">
 <h4 class="text-white text-xs font-bold uppercase tracking-widest mb-6">Quick Navigation</h4>
 <ul class="space-y-3 font-body text-xs tracking-wide">
-<li><a class="text-gray-400 hover:text-white transition-colors" href="#">Privacy Policy</a></li>
-<li><a class="text-fecb32 underline underline-offset-4" href="contact.html">Contact Us</a></li>
-<li><a class="text-gray-400 hover:text-white transition-colors" href="index.html">UMD Home</a></li>
+<li><a class="text-gray-400 hover:text-white transition-colors" href="info.html">Privacy Policy</a></li>
+<li><a class="text-xs hover:text-white transition-transform duration-200 hover:translate-x-1" href="https://lsbe.d.umn.edu/" target="_blank" rel="noopener noreferrer">LSBE Home</a></li>
+<li><a class="text-gray-400 hover:text-white transition-colors" href="https://d.umn.edu/" target="_blank" rel="noopener noreferrer">UMD Home</a></li>
 </ul>
 </div>
 <div class="col-span-1">
 <h4 class="text-white text-xs font-bold uppercase tracking-widest mb-6">Resources</h4>
 <ul class="space-y-3 font-body text-xs tracking-wide">
-<li><a class="text-gray-400 hover:text-white transition-colors" href="#">Accessibility</a></li>
-<li><a class="text-gray-400 hover:text-white transition-colors" href="#">Employment</a></li>
-<li><a class="text-gray-400 hover:text-white transition-colors" href="#">Safety Information</a></li>
+<li><a class="text-gray-400 hover:text-white transition-colors" href="info.html">Accessibility</a></li>
+<li><a class="text-gray-400 hover:text-white transition-colors" href="contact.html">Employment</a></li>
+<li><a class="text-gray-400 hover:text-white transition-colors" href="info.html">Safety Information</a></li>
 </ul>
 </div>
 <div class="col-span-1">

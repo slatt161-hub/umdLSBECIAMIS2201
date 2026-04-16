@@ -90,24 +90,34 @@
             background: rgba(250, 249, 250, 0.8);
             backdrop-filter: blur(20px);
         }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
 <!-- Top Navigation Shell -->
-<nav class="sticky top-0 z-50 flex justify-between items-center px-12 py-6 max-w-[1920px] mx-auto bg-[#faf9fa]/80 backdrop-blur-xl shadow-sm">
-<div class="text-xl font-black text-[#811026] tracking-tighter font-headline">
-            UMD Consumer Insight
-        </div>
-<div class="hidden md:flex items-center gap-8 font-headline tracking-tight text-sm font-semibold uppercase">
-<a class="text-stone-600 font-medium hover:text-[#811026] transition-all duration-300" href="#">Directory</a>
-<a class="text-[#811026] border-b-2 border-[#811026] pb-1" href="#">Research</a>
-<a class="text-stone-600 font-medium hover:text-[#811026] transition-all duration-300" href="#">Publications</a>
-<a class="text-stone-600 font-medium hover:text-[#811026] transition-all duration-300" href="#">Insights</a>
-<a class="text-stone-600 font-medium hover:text-[#811026] transition-all duration-300" href="#">Contact</a>
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-[#1a1c1d]/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex items-center justify-between px-8 py-4 max-w-screen-2xl mx-auto">
+<a class="font-['Work_Sans'] font-black text-xl tracking-tighter text-[#811026] dark:text-[#ffdadb]" href="index.html">UMD Consumer Insight &amp; Analytics</a>
+<div class="hidden md:flex items-center space-x-8 font-['Work_Sans'] font-medium text-sm tracking-tight">
+<a class="text-[#2a2a2a] dark:text-[#e3e2e3] hover:text-[#811026] dark:hover:text-[#fecb32] transition-all duration-300" href="index.html">Home</a>
+<a class="text-[#2a2a2a] dark:text-[#e3e2e3] hover:text-[#811026] dark:hover:text-[#fecb32] transition-all duration-300" href="about.html">About</a>
+<a class="text-[#2a2a2a] dark:text-[#e3e2e3] hover:text-[#811026] dark:hover:text-[#fecb32] transition-all duration-300" href="academics.html">Academics</a>
+<a class="text-[#811026] dark:text-[#fecb32] border-b-2 border-[#811026] dark:border-[#fecb32] pb-1 transition-all duration-300" href="faculty.html">Faculty</a>
+<a class="text-[#2a2a2a] dark:text-[#e3e2e3] hover:text-[#811026] dark:hover:text-[#fecb32] transition-all duration-300" href="centers.html">Community</a>
+<a class="text-[#2a2a2a] dark:text-[#e3e2e3] hover:text-[#811026] dark:hover:text-[#fecb32] transition-all duration-300" href="news.html">News</a>
+<a class="text-[#2a2a2a] dark:text-[#e3e2e3] hover:text-[#811026] dark:hover:text-[#fecb32] transition-all duration-300" href="info.html">Info</a>
 </div>
-<a class="inline-flex bg-primary-container text-white px-6 py-2 rounded-xl text-sm font-bold scale-95 active:scale-90 transition-transform" href="contact.html">
-            Apply Now
-        </a>
+<div class="flex items-center gap-4">
+<a class="inline-flex px-5 py-2 text-sm font-semibold rounded-xl border-2 border-[#811026] text-[#811026] hover:bg-[#811026] hover:text-white transition-all duration-300" href="adminlogin.html">Staff Login</a>
+<a class="inline-flex px-5 py-2 rounded-xl bg-[#811026] text-white hover:bg-[#fecb32] hover:text-[#1a1c1d] transition-all duration-300" href="contact.html">Contact Us</a>
+</div>
+</div>
 </nav>
 <main class="max-w-[1920px] mx-auto px-6 md:px-12">
 <!-- Hero Section: Editorial Impact -->
@@ -237,44 +247,12 @@
 <button class="bg-surface-container-high text-on-surface-variant px-6 py-2 rounded-full text-sm font-bold hover:bg-surface-container-highest transition-colors">Data Science</button>
 </div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
-<!-- Faculty 1 -->
-<div class="group">
-<div class="aspect-[4/5] bg-surface-container-low rounded-2xl overflow-hidden mb-6 relative">
-<img alt="Dr. Elena Rodriguez" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Portrait of a female professor in a modern office, professional and welcoming atmosphere, soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqx3zPtGM0kNjxCtZVjfBuaFaLXf64x00Wbdj2-uPbIFXYQzOvuj4Lh9nYKA19ikorViqRjzVJ-mDAJ8jDBLxFj5y_ZPqO-2S6D-hJgDHzvLtuuQnoCdw8b5eatZ868q1_qFYwzjma-nRgkIrjzWnXB6ZGP77bIGDpp_Kfw5zZ_Jh8KhbpNPRk5TWNB0IpazyW8AIBseOh2h7mgzvr6EPZQghf-eyJQezw7UepLYVywBbo2LvkJrBjon1S1OZyDxcnT8fo3pD653Dl"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative group">
+<div id="faculty-list" class="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory hide-scrollbar">
+    <!-- Dynamic items injected here -->
 </div>
-<h3 class="font-headline text-xl font-bold text-tertiary">Dr. Elena Rodriguez</h3>
-<p class="text-primary font-bold text-sm mb-3">Professor &amp; Lead Researcher</p>
-<p class="text-sm text-on-surface-variant mb-4">Expertise: Neuromarketing, Behavioral Economics, Biometric Analytics.</p>
-</div>
-<!-- Faculty 2 -->
-<div class="group">
-<div class="aspect-[4/5] bg-surface-container-low rounded-2xl overflow-hidden mb-6 relative">
-<img alt="Dr. Marcus Thorne" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Portrait of a male faculty member in a business casual setting, sharp suit, intelligent expression, academic background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8gYrkddmERSZrbBYEc-kIoKbOfrHvRXrN85XsIEM9miOw3fL4H9buw85Jwd6LRWQa4lPe9SKGZgsUAqfbmWipWDGZd3jlT-FiXJQtlxJRnDPM_t-t4aDduo1loguvpr7T34pfMtS48Phx1N8ZTlYsvONWXkmYsI5A490DfW3MfTMRgIVTeVQ2dEL2aRqQVpwRdqj3aLF-1pHv0rHFn3adiwcLRjZUkea3JqsP-sEB4VD9jF2sBLBbFp6DBmKlYxZo2ipdS6om16y3"/>
-</div>
-<h3 class="font-headline text-xl font-bold text-tertiary">Dr. Marcus Thorne</h3>
-<p class="text-primary font-bold text-sm mb-3">Associate Professor</p>
-<p class="text-sm text-on-surface-variant mb-4">Expertise: Predictive Modeling, Retail Tech, Consumer Loyalty Systems.</p>
-</div>
-<!-- Faculty 3 -->
-<div class="group">
-<div class="aspect-[4/5] bg-surface-container-low rounded-2xl overflow-hidden mb-6 relative">
-<img alt="Prof. Sarah Jenkins" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Portrait of a professional female researcher in a bright, modern academic setting with subtle bookshelves in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvFpsBr7iu9zoRPxcN8xiFQWIkFFCcCQM6li6VudOn_QQVQ8GGJPG_BansFVganSjpe04VnKnmTCUDwnwy5bcZ_oo419AyAJqXS147Cozh2S5eU93JJ3EhwO0oYpWSMu-rYP5DbM0ILdv0jY8KlXgYDTFK82BCO8bqk-sDVFR3z1gGOcD2ToU3LiKNJVpUd5fAp132HEgj_5NgOVKC-8jeSJLgJDBPy9CzQ2ncifjQXw9keih8Gk0jqIH0XYaFmac2Cqv5U5IcIsG6"/>
-</div>
-<h3 class="font-headline text-xl font-bold text-tertiary">Prof. Sarah Jenkins</h3>
-<p class="text-primary font-bold text-sm mb-3">Data Science Lead</p>
-<p class="text-sm text-on-surface-variant mb-4">Expertise: Machine Learning in Marketing, NLP, Sentiment Analysis.</p>
-</div>
-<!-- Faculty 4 -->
-<div class="group">
-<div class="aspect-[4/5] bg-surface-container-low rounded-2xl overflow-hidden mb-6 relative">
-<img alt="Dr. Arthur Vance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Middle-aged male professor with a warm expression, modern academic office, high-end editorial portrait style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa7p_cyzUlyEBUbyDpWH2FDEQzZiL_Mbf5T6TSK098y5EvHLo0WLUePupV2rWZ8LLQHAq9LsilxYnREefjxUJyjiCxUEVErbWF9eMBlM3mtzLZq1WkePVYNq41ggTFKw7QC_-1GOjwS889cJDUgePrcZ0T92z-KP-ucjPYab29ypaYjJgY7uFwLmro5JWZyPQ47C8xnAXzyHxsYnaqWzopdiKe0g0DtUncjlOldHvm9F7BBgIsnhN9N96LJIjGFI9rmYXw3HOQsvV5"/>
-</div>
-<h3 class="font-headline text-xl font-bold text-tertiary">Dr. Arthur Vance</h3>
-<p class="text-primary font-bold text-sm mb-3">Senior Lecturer</p>
-<p class="text-sm text-on-surface-variant mb-4">Expertise: Market Ethics, Global Consumption Trends, Strategy Design.</p>
-</div>
+<button id="scroll-left" class="absolute left-0 top-1/2 -translate-y-[120%] -ml-6 w-12 h-12 rounded-full bg-white shadow-xl text-primary flex items-center justify-center hover:scale-110 transition-transform opacity-0 group-hover:opacity-100 z-10 hidden"><span class="material-symbols-outlined">arrow_back_ios_new</span></button>
+<button id="scroll-right" class="absolute right-0 top-1/2 -translate-y-[120%] -mr-6 w-12 h-12 rounded-full bg-white shadow-xl text-primary flex items-center justify-center hover:scale-110 transition-transform opacity-0 group-hover:opacity-100 z-10 hidden"><span class="material-symbols-outlined">arrow_forward_ios</span></button>
 </div>
 </section>
 <!-- Call to Action: Focus & Conversion -->
@@ -307,10 +285,73 @@
 <p class="font-['Inter'] text-xs leading-relaxed text-stone-400">© 2024 University of Minnesota Duluth. Consumer Insight &amp; Analytics Department.</p>
 </div>
 <div class="flex flex-wrap justify-center gap-8 font-['Inter'] text-xs leading-relaxed text-stone-400">
-<a class="hover:text-[#fecb32] underline-offset-4 hover:underline transition-opacity" href="#">Privacy Policy</a>
-<a class="hover:text-[#fecb32] underline-offset-4 hover:underline transition-opacity" href="#">Accessibility</a>
-<a class="hover:text-[#fecb32] underline-offset-4 hover:underline transition-opacity" href="#">Research Ethics</a>
-<a class="hover:text-[#fecb32] underline-offset-4 hover:underline transition-opacity" href="index.html">UMD Home</a>
+<a class="hover:text-[#fecb32] underline-offset-4 hover:underline transition-opacity" href="info.html">Privacy Policy</a>
+<a class="hover:text-[#fecb32] underline-offset-4 hover:underline transition-opacity" href="info.html">Accessibility</a>
+<a class="hover:text-[#fecb32] underline-offset-4 hover:underline transition-opacity" href="info.html">Research Ethics</a>
+<a class="hover:text-[#fecb32] underline-offset-4 hover:underline transition-opacity" href="https://d.umn.edu/" target="_blank" rel="noopener noreferrer">UMD Home</a>
+<a class="text-xs hover:text-white transition-transform duration-200 hover:translate-x-1" href="https://lsbe.d.umn.edu/" target="_blank" rel="noopener noreferrer">LSBE Home</a>
 </div>
 </footer>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const facultyContainer = document.getElementById("faculty-list");
+        const scrollLeft = document.getElementById("scroll-left");
+        const scrollRight = document.getElementById("scroll-right");
+
+        const defaults = [
+            { name: "Dr. Elena Rodriguez", title: "Professor & Lead Researcher", bio: "Expertise: Neuromarketing, Behavioral Economics, Biometric Analytics.", image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCqx3zPtGM0kNjxCtZVjfBuaFaLXf64x00Wbdj2-uPbIFXYQzOvuj4Lh9nYKA19ikorViqRjzVJ-mDAJ8jDBLxFj5y_ZPqO-2S6D-hJgDHzvLtuuQnoCdw8b5eatZ868q1_qFYwzjma-nRgkIrjzWnXB6ZGP77bIGDpp_Kfw5zZ_Jh8KhbpNPRk5TWNB0IpazyW8AIBseOh2h7mgzvr6EPZQghf-eyJQezw7UepLYVywBbo2LvkJrBjon1S1OZyDxcnT8fo3pD653Dl" },
+            { name: "Dr. Marcus Thorne", title: "Associate Professor", bio: "Expertise: Predictive Modeling, Retail Tech, Consumer Loyalty Systems.", image: "https://lh3.googleusercontent.com/aida-public/AB6AXuB8gYrkddmERSZrbBYEc-kIoKbOfrHvRXrN85XsIEM9miOw3fL4H9buw85Jwd6LRWQa4lPe9SKGZgsUAqfbmWipWDGZd3jlT-FiXJQtlxJRnDPM_t-t4aDduo1loguvpr7T34pfMtS48Phx1N8ZTlYsvONWXkmYsI5A490DfW3MfTMRgIVTeVQ2dEL2aRqQVpwRdqj3aLF-1pHv0rHFn3adiwcLRjZUkea3JqsP-sEB4VD9jF2sBLBbFp6DBmKlYxZo2ipdS6om16y3" },
+            { name: "Prof. Sarah Jenkins", title: "Data Science Lead", bio: "Expertise: Machine Learning in Marketing, NLP, Sentiment Analysis.", image: "https://lh3.googleusercontent.com/aida-public/AB6AXuDvFpsBr7iu9zoRPxcN8xiFQWIkFFCcCQM6li6VudOn_QQVQ8GGJPG_BansFVganSjpe04VnKnmTCUDwnwy5bcZ_oo419AyAJqXS147Cozh2S5eU93JJ3EhwO0oYpWSMu-rYP5DbM0ILdv0jY8KlXgYDTFK82BCO8bqk-sDVFR3z1gGOcD2ToU3LiKNJVpUd5fAp132HEgj_5NgOVKC-8jeSJLgJDBPy9CzQ2ncifjQXw9keih8Gk0jqIH0XYaFmac2Cqv5U5IcIsG6" },
+            { name: "Dr. Arthur Vance", title: "Senior Lecturer", bio: "Expertise: Market Ethics, Global Consumption Trends, Strategy Design.", image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAa7p_cyzUlyEBUbyDpWH2FDEQzZiL_Mbf5T6TSK098y5EvHLo0WLUePupV2rWZ8LLQHAq9LsilxYnREefjxUJyjiCxUEVErbWF9eMBlM3mtzLZq1WkePVYNq41ggTFKw7QC_-1GOjwS889cJDUgePrcZ0T92z-KP-ucjPYab29ypaYjJgY7uFwLmro5JWZyPQ47C8xnAXzyHxsYnaqWzopdiKe0g0DtUncjlOldHvm9F7BBgIsnhN9N96LJIjGFI9rmYXw3HOQsvV5" }
+        ];
+
+        let facultyData = [];
+        try {
+            const saved = localStorage.getItem("site_faculty");
+            if (saved) {
+                facultyData = JSON.parse(saved);
+            }
+        } catch(e) { }
+
+        if (!facultyData || facultyData.length === 0) {
+            facultyData = defaults;
+        }
+
+        if (facultyContainer) {
+            facultyContainer.innerHTML = '';
+            facultyData.forEach(faculty => {
+                const imgMarkup = faculty.image 
+                    ? `<img alt="${faculty.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="${faculty.image}">`
+                    : `<div class="w-full h-full flex items-center justify-center bg-surface-container"><span class="material-symbols-outlined text-4xl text-on-surface-variant">person</span></div>`;
+
+                const html = `
+                    <div class="group w-[80vw] md:w-[calc(50%-1.5rem)] xl:w-[calc(25%-1.5rem)] shrink-0 snap-start">
+                        <div class="aspect-[4/5] bg-surface-container-low rounded-2xl overflow-hidden mb-6 relative">
+                            ${imgMarkup}
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold text-tertiary">${faculty.name}</h3>
+                        <p class="text-primary font-bold text-sm mb-3">${faculty.title}</p>
+                        <p class="text-sm text-on-surface-variant mb-4">${faculty.bio}</p>
+                    </div>
+                `;
+                facultyContainer.insertAdjacentHTML('beforeend', html);
+            });
+
+            if (facultyData.length > 4) {
+                scrollLeft.classList.remove('hidden');
+                scrollRight.classList.remove('hidden');
+            }
+            
+            scrollLeft.addEventListener('click', () => {
+                const cardWidth = facultyContainer.children[0].offsetWidth;
+                facultyContainer.scrollBy({ left: -(cardWidth + 32), behavior: 'smooth' });
+            });
+            scrollRight.addEventListener('click', () => {
+                const cardWidth = facultyContainer.children[0].offsetWidth;
+                facultyContainer.scrollBy({ left: (cardWidth + 32), behavior: 'smooth' });
+            });
+        }
+    });
+</script>
 </body></html>

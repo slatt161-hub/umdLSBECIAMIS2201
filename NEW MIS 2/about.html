@@ -93,24 +93,21 @@
 </head>
 <body class="bg-background text-on-background font-body antialiased">
 <!-- Top Navigation Bar -->
-<nav class="fixed top-0 w-full z-50 glass-nav shadow-sm">
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-[#1a1c1d]/80 backdrop-blur-md shadow-sm dark:shadow-none">
 <div class="flex items-center justify-between px-8 py-4 max-w-screen-2xl mx-auto">
-<div class="font-['Work_Sans'] font-black text-xl tracking-tighter text-[#811026]">
-                UMD Consumer Insight &amp; Analytics
-            </div>
+<a class="font-['Work_Sans'] font-black text-xl tracking-tighter text-[#811026] dark:text-[#ffdadb]" href="index.html">UMD Consumer Insight &amp; Analytics</a>
 <div class="hidden md:flex items-center space-x-8 font-['Work_Sans'] font-medium text-sm tracking-tight">
-<a class="text-[#811026] border-b-2 border-[#811026] pb-1" href="about.html">About</a>
-<a class="text-[#2a2a2a] hover:text-[#811026] transition-all duration-300" href="academics.html">Academics</a>
-<a class="text-[#2a2a2a] hover:text-[#811026] transition-all duration-300" href="faculty.html">Faculty</a>
-<a class="text-[#2a2a2a] hover:text-[#811026] transition-all duration-300" href="centers.html">Community</a>
-<a class="text-[#2a2a2a] hover:text-[#811026] transition-all duration-300" href="news.html">News</a>
-<a class="text-[#2a2a2a] hover:text-[#811026] transition-all duration-300" href="info.html">Info For</a>
+<a class="text-[#2a2a2a] dark:text-[#e3e2e3] hover:text-[#811026] dark:hover:text-[#fecb32] transition-all duration-300" href="index.html">Home</a>
+<a class="text-[#811026] dark:text-[#fecb32] border-b-2 border-[#811026] pb-1" href="about.html">About</a>
+<a class="text-[#2a2a2a] dark:text-[#e3e2e3] hover:text-[#811026] dark:hover:text-[#fecb32] transition-all duration-300" href="academics.html">Academics</a>
+<a class="text-[#2a2a2a] dark:text-[#e3e2e3] hover:text-[#811026] dark:hover:text-[#fecb32] transition-all duration-300" href="faculty.html">Faculty</a>
+<a class="text-[#2a2a2a] dark:text-[#e3e2e3] hover:text-[#811026] dark:hover:text-[#fecb32] transition-all duration-300" href="centers.html">Community</a>
+<a class="text-[#2a2a2a] dark:text-[#e3e2e3] hover:text-[#811026] dark:hover:text-[#fecb32] transition-all duration-300" href="news.html">News</a>
+<a class="text-[#2a2a2a] dark:text-[#e3e2e3] hover:text-[#811026] dark:hover:text-[#fecb32] transition-all duration-300" href="info.html">Info</a>
 </div>
-<div class="flex items-center gap-6">
-<span class="material-symbols-outlined text-[#2a2a2a] cursor-pointer">search</span>
-<a class="inline-flex bg-[#811026] text-white px-6 py-2 rounded-xl text-sm font-bold tracking-wide transition-transform active:scale-95" href="contact.html">
-                    Apply Now
-                </a>
+<div class="flex items-center gap-4">
+<a class="inline-flex px-5 py-2 text-sm font-semibold rounded-xl border-2 border-[#811026] text-[#811026] hover:bg-[#811026] hover:text-white transition-all duration-300" href="adminlogin.html">Staff Login</a>
+<a class="inline-flex px-5 py-2 rounded-xl bg-[#811026] text-white hover:bg-[#fecb32] hover:text-[#1a1c1d] transition-all duration-300" href="contact.html">Contact Us</a>
 </div>
 </div>
 </nav>
@@ -137,6 +134,30 @@
 </div>
 </div>
 </section>
+<!-- Student Experiences Panel -->
+<section class="py-24 px-8 max-w-screen-2xl mx-auto border-t border-outline-variant/30 mt-12 bg-surface">
+    <!-- Header/Image -->
+    <div class="mb-12">
+        <h2 class="text-4xl font-headline font-bold text-primary-container tracking-tight mb-4">Student Experiences</h2>
+        <p class="text-xl text-on-surface-variant max-w-2xl">Hear directly from our cohort. Real students, real data, real stories.</p>
+    </div>
+    
+    <!-- Header Image Slideshow -->
+    <div id="student-gallery-slideshow" class="w-full h-64 md:h-96 rounded-3xl overflow-hidden mb-16 relative bg-black">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF4tKKipaWg9R1L4JAwa2awHJz5ZF4Ki1jK8ShEYDyjy4ysTkw_GZC_J0Ld2Vr86RCaYv8Vw5kiRB9iFtErg5Ovn0IalG3dCmZ1aKhXeehOJu_czVDjMawgRrwg-ilbJ_QCT-x2qixoS3irDvhQP2P7smgrq0Uxhyy6LRoIBjHJ-FomMtG43_A7NTr-pRco-MNPTSBhrKCDyF6ZSS3a_oXCzCh39RSLgiMGCWnEtKD_aVayWIGFREMTfXAV6Gm19Gpj1XaDES4G7fU" alt="Students in Lab" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 slide-img opacity-80" />
+        <div class="absolute inset-0 bg-primary-container/30 mix-blend-multiply z-10 pointer-events-none"></div>
+    </div>
+
+    <!-- Carousel Container -->
+    <div class="relative group">
+        <div id="student-list" class="flex overflow-x-auto gap-8 pb-8 snap-x snap-mandatory hide-scrollbar">
+            <!-- Dynamically populated student cards -->
+        </div>
+        <button id="scroll-left-student" class="absolute left-0 top-1/2 -translate-y-1/2 -ml-6 w-12 h-12 rounded-full bg-white shadow-xl text-primary flex items-center justify-center hover:scale-110 transition-transform opacity-0 group-hover:opacity-100 z-10 hidden"><span class="material-symbols-outlined">arrow_back_ios_new</span></button>
+        <button id="scroll-right-student" class="absolute right-0 top-1/2 -translate-y-1/2 -mr-6 w-12 h-12 rounded-full bg-white shadow-xl text-primary flex items-center justify-center hover:scale-110 transition-transform opacity-0 group-hover:opacity-100 z-10 hidden"><span class="material-symbols-outlined">arrow_forward_ios</span></button>
+    </div>
+</section>
+
 <!-- Mission & Vision: Asymmetric Bento Grid -->
 <section class="bg-surface-container-low py-32 px-8">
 <div class="max-w-screen-2xl mx-auto">
@@ -153,7 +174,7 @@
 <span class="material-symbols-outlined text-4xl text-secondary mb-6" style="font-variation-settings: 'FILL' 1;">insights</span>
 <h3 class="text-3xl font-headline font-bold mb-6">Our Mission</h3>
 <p class="text-lg text-on-surface-variant leading-relaxed mb-8">
-                                To empower students with a rigorous interdisciplinary education that fuses advanced quantitative analytics with deep psychological market understanding. We aim to produce leaders who transform complex datasets into ethical, actionable business strategies.
+                                To develop students to transform consumer data related to buying behaviors into insights and actionable recommendations for organizations. We empower our students to confidently present their insights as solutions to complex business problems.
                             </p>
 </div>
 <div class="flex gap-4">
@@ -166,7 +187,7 @@
 <div class="bg-primary-container text-white p-12 rounded-xl flex flex-col justify-center">
 <h3 class="text-3xl font-headline font-bold mb-6 text-secondary-container">Our Vision</h3>
 <p class="text-lg leading-relaxed opacity-90">
-                            To be the premier destination for consumer analytics in the Midwest, recognized globally for innovation in understanding the human element within digital ecosystems.
+                            To help organizations make better strategic decisions based on data rather than opinion, while deeply studying why and how consumers interact with the marketplace, products, and services.
                         </p>
 </div>
 </div>
@@ -182,16 +203,16 @@
 </div>
 </div>
 <div class="col-span-12 md:col-span-6 order-1 md:order-2">
-<h2 class="text-5xl font-headline font-extrabold text-primary-container mb-8">Our Story</h2>
+<h2 class="text-5xl font-headline font-extrabold text-primary-container mb-8">Our Cohort Approach</h2>
 <div class="space-y-6 text-on-surface-variant text-lg leading-relaxed">
 <p>
-                            Founded at the intersection of UMD’s Labovitz School of Business and Economics and the growing demand for data-literate marketing professionals, the Consumer Insight &amp; Analytics major was born from a simple observation: businesses had plenty of data, but very little understanding.
+                            As decision-making becomes more data-driven, the Consumer Insights & Analytics major sets a new standard with a highly selective application process and dedicated cohort approach. Each cohort completes specialized courses together, building strong professional relationships.
                         </p>
 <p>
-                            Since our inception, we have grown from a niche concentration into a flagship major. We’ve built partnerships with Fortune 500 companies and local startups alike, creating a living laboratory where students apply classroom theory to real-world market challenges.
+                            We partner directly with leading corporations on active, real-world industry projects. Our sponsors have included powerhouses like Hormel, Target, maurices, and Schwan’s Food Company. Students have 24/7 access to our state-of-the-art analytics lab, utilizing tools like Excel, PowerBI, Tableau, SQL, SAS, R, and Python.
                         </p>
 <p>
-                            Today, our alumni lead departments at major global brands, proving that the blend of Duluth's grit and analytical precision is a powerful catalyst for professional success.
+                            From acceptance to graduation, dedicated directors act as mentors, ensuring students are perfectly positioned for internships that often turn into full-time roles before their senior year even concludes.
                         </p>
 </div>
 </div>
@@ -212,36 +233,41 @@
 </div>
 </div>
 <div class="col-span-12 md:col-span-8">
-<h2 class="text-4xl font-headline font-bold mb-8 text-secondary-container">A Message from Leadership</h2>
+<h2 class="text-4xl font-headline font-bold mb-8 text-secondary-container">Community & Leadership</h2>
 <div class="space-y-6 text-xl font-light italic leading-relaxed opacity-90">
-                            "In an era where every click, purchase, and preference is recorded, the role of the consumer analyst has never been more critical—or more human. At UMD, we don't just teach you how to run regressions or build dashboards. We teach you how to see the person behind the data point."
+                            "The CIA major develops students to transform consumer data related to buying behaviors into insights and actionable recommendations for organizations. Active Analytics Club members participate in regional undergraduate analytic competitions like the Midwest Undergraduate Data Analytics Competition."
                         </div>
 <div class="mt-12">
-<p class="text-2xl font-headline font-bold">Dr. Elena Rodriguez</p>
-<p class="text-secondary-fixed opacity-80 uppercase tracking-widest text-sm font-bold">Department Head, Consumer Insight &amp; Analytics</p>
+<p class="text-2xl font-headline font-bold">UMD CIA Advisory Board</p>
+<p class="text-secondary-fixed opacity-80 uppercase tracking-widest text-sm font-bold">Network & Mentorship Commitment</p>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 </section>
+
+
 <!-- Stats Grid -->
 <section class="py-32 px-8 max-w-screen-2xl mx-auto">
 <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
 <div class="text-center">
-<p class="text-6xl font-headline font-black text-primary-container mb-2">15+</p>
-<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Industry Partners</p>
+<p class="text-6xl font-headline font-black text-primary-container mb-2">Exclusive</p>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Cohort Acceptance</p>
 </div>
 <div class="text-center">
-<p class="text-6xl font-headline font-black text-primary-container mb-2">250+</p>
-<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Active Students</p>
+<p class="text-6xl font-headline font-black text-primary-container mb-2">100%</p>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Placement Rate</p>
 </div>
 <div class="text-center">
-<p class="text-6xl font-headline font-black text-primary-container mb-2">4.0</p>
-<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Avg Alumni Rating</p>
+<p class="text-6xl font-headline font-black text-primary-container mb-2">Top Tier</p>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Starting Salaries</p>
 </div>
 <div class="text-center">
-<p class="text-6xl font-headline font-black text-primary-container mb-2">12:1</p>
-<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Student-Faculty Ratio</p>
+<p class="text-6xl font-headline font-black text-primary-container mb-2">24/7</p>
+<p class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Analytics Lab Access</p>
 </div>
 </div>
 </section>
@@ -271,8 +297,8 @@
 </div>
 <div class="flex flex-col space-y-4">
 <h4 class="text-white font-bold text-sm mb-2">Connect</h4>
-<a class="text-xs hover:text-white transition-transform duration-200 hover:translate-x-1" href="contact.html">Contact Us</a>
-<a class="text-xs hover:text-white transition-transform duration-200 hover:translate-x-1" href="index.html">UMD Home</a>
+<a class="text-xs hover:text-white transition-transform duration-200 hover:translate-x-1" href="https://lsbe.d.umn.edu/" target="_blank" rel="noopener noreferrer">LSBE Home</a>
+<a class="text-xs hover:text-white transition-transform duration-200 hover:translate-x-1" href="https://d.umn.edu/" target="_blank" rel="noopener noreferrer">UMD Home</a>
 <div class="flex gap-4 mt-4">
 <span class="material-symbols-outlined text-xl cursor-pointer hover:text-[#fecb32]">public</span>
 <span class="material-symbols-outlined text-xl cursor-pointer hover:text-[#fecb32]">group</span>
@@ -287,5 +313,115 @@
 <a class="opacity-60 hover:opacity-100" href="contact.html">VISIT CAMPUS</a>
 </div>
 </div>
+</div>
 </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const studentContainer = document.getElementById("student-list");
+    const scrollLeft = document.getElementById("scroll-left-student");
+    const scrollRight = document.getElementById("scroll-right-student");
+
+    const defaultStudents = [
+        { name: "Alex Chen", title: "CIA Senior", bio: "Interned at Target Corp.", quote: "The 24/7 analytics lab was integral to my capstone project. Being able to access industry datasets at any time gave me the edge I needed.", image: "" },
+        { name: "Sarah Jenkins", title: "CIA Junior", bio: "President of Analytics Club", quote: "The cohort model meant I was learning alongside passionate peers. We constantly pushed each other to build better predictive models.", image: "" },
+        { name: "Marcus Torres", title: "Recent Alumni", bio: "Data Analyst at Best Buy", quote: "I walked into my first job already proficient in Tableau and Python because of the hands-on curriculum in the CIA major.", image: "" }
+    ];
+
+    let studentData = [];
+    try {
+        const saved = localStorage.getItem("site_students");
+        if (saved) {
+            studentData = JSON.parse(saved);
+        }
+    } catch(e) { }
+
+    if (!studentData || studentData.length === 0) {
+        studentData = defaultStudents;
+    }
+
+    if (studentContainer) {
+        studentContainer.innerHTML = '';
+        studentData.forEach(student => {
+            const imgMarkup = student.image 
+                ? `<img alt="${student.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="${student.image}">`
+                : `<div class="w-full h-full flex items-center justify-center bg-surface-container"><span class="material-symbols-outlined text-4xl text-on-surface-variant">person</span></div>`;
+
+            const html = `
+                <div class="group w-[80vw] md:w-[calc(50%-1.5rem)] xl:w-[calc(33.333%-1.5rem)] shrink-0 snap-start bg-surface-container-lowest rounded-3xl p-8 border border-outline-variant/30 shadow-sm">
+                    <div class="flex items-center gap-6 mb-6">
+                        <div class="w-20 h-20 rounded-full overflow-hidden shrink-0 border-2 border-primary/10">
+                            ${imgMarkup}
+                        </div>
+                        <div>
+                            <h3 class="font-headline text-xl font-bold text-tertiary">${student.name}</h3>
+                            <p class="text-primary font-bold text-xs uppercase tracking-widest">${student.title}</p>
+                            <p class="text-on-surface-variant text-sm mt-1 opacity-80">${student.bio}</p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <span class="material-symbols-outlined text-secondary-container/30 text-5xl absolute -top-4 -left-2 -z-10">format_quote</span>
+                        <p class="text-lg text-on-surface-variant leading-relaxed italic z-10 relative">"${student.quote}"</p>
+                    </div>
+                </div>
+            `;
+            studentContainer.insertAdjacentHTML('beforeend', html);
+        });
+
+        if(scrollLeft && scrollRight) {
+            if (studentData.length > 3) {
+                scrollLeft.classList.remove('hidden');
+                scrollRight.classList.remove('hidden');
+            }
+            
+            scrollLeft.addEventListener('click', () => {
+                const cardWidth = studentContainer.children[0].offsetWidth;
+                studentContainer.scrollBy({ left: -(cardWidth + 32), behavior: 'smooth' });
+            });
+            scrollRight.addEventListener('click', () => {
+                const cardWidth = studentContainer.children[0].offsetWidth;
+                studentContainer.scrollBy({ left: (cardWidth + 32), behavior: 'smooth' });
+            });
+        }
+    }
+
+    // Slideshow Animation Logic
+    const slideshowContainer = document.getElementById("student-gallery-slideshow");
+    if(slideshowContainer) {
+        const defaultImage = "https://lh3.googleusercontent.com/aida-public/AB6AXuDF4tKKipaWg9R1L4JAwa2awHJz5ZF4Ki1jK8ShEYDyjy4ysTkw_GZC_J0Ld2Vr86RCaYv8Vw5kiRB9iFtErg5Ovn0IalG3dCmZ1aKhXeehOJu_czVDjMawgRrwg-ilbJ_QCT-x2qixoS3irDvhQP2P7smgrq0Uxhyy6LRoIBjHJ-FomMtG43_A7NTr-pRco-MNPTSBhrKCDyF6ZSS3a_oXCzCh39RSLgiMGCWnEtKD_aVayWIGFREMTfXAV6Gm19Gpj1XaDES4G7fU";
+        let galleryData = [];
+        try {
+            const savedGallery = localStorage.getItem("site_student_gallery");
+            if(savedGallery) { galleryData = JSON.parse(savedGallery); }
+        } catch(e) {}
+        
+        if(!galleryData || galleryData.length === 0) {
+            galleryData = [defaultImage];
+        }
+
+        slideshowContainer.innerHTML = '<div class="absolute inset-0 bg-primary-container/30 mix-blend-multiply z-10 pointer-events-none"></div>';
+        
+        const imgElements = [];
+        galleryData.forEach((src, idx) => {
+            const img = document.createElement('img');
+            img.src = src;
+            img.className = `absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${idx === 0 ? 'opacity-80' : 'opacity-0'}`;
+            slideshowContainer.appendChild(img);
+            imgElements.push(img);
+        });
+
+        if(imgElements.length > 1) {
+            let currentIndex = 0;
+            setInterval(() => {
+                imgElements[currentIndex].classList.remove('opacity-80');
+                imgElements[currentIndex].classList.add('opacity-0');
+                currentIndex = (currentIndex + 1) % imgElements.length;
+                imgElements[currentIndex].classList.remove('opacity-0');
+                imgElements[currentIndex].classList.add('opacity-80');
+            }, 4000);
+        }
+    }
+
+});
+</script>
 </body></html>
